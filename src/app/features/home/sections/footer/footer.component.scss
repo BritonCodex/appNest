@@ -1,0 +1,266 @@
+/* footer.component.css */
+
+/* --- Footer Section --- */
+.footer {
+  background: #030303;
+  padding: 4rem 2rem 1.5rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Footer Content --- */
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* --- Brand Column --- */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.brand-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.brand-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #FFFFFF 0%, #B0B0D0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-tagline {
+  font-size: 0.95rem;
+  color: #A0A0B8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- Footer Headings --- */
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.3px;
+}
+
+/* --- Quick Links --- */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: #A0A0B8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #6C63FF;
+}
+
+/* --- Contact --- */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  color: #A0A0B8;
+  font-size: 0.9rem;
+}
+
+.contact-icon {
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.footer-contact a {
+  color: #A0A0B8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+  color: #6C63FF;
+}
+
+/* --- Locations --- */
+.footer-locations {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-locations li {
+  color: #A0A0B8;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  transition: color 0.2s ease;
+}
+
+.footer-locations li:hover {
+  color: #6C63FF;
+  cursor: default;
+}
+
+/* --- Footer Bottom --- */
+.footer-bottom {
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-copyright {
+  color: #6B6B8A;
+  font-size: 0.85rem;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1.5fr 1fr 1.5fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .brand-text {
+    font-size: 1.4rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.85rem;
+  }
+
+  .footer-heading {
+    font-size: 0.95rem;
+  }
+
+  .footer-links a,
+  .footer-contact li,
+  .footer-locations li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 2rem 0.75rem 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+  }
+
+  .footer-contact li {
+    justify-content: center;
+  }
+
+  .brand-text {
+    font-size: 1.3rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.8rem;
+  }
+
+  .footer-heading {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-links li,
+  .footer-contact li,
+  .footer-locations li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a,
+  .footer-contact li,
+  .footer-locations li {
+    font-size: 0.8rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.75rem;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1400px) {
+  .footer-container {
+    max-width: 1400px;
+  }
+
+  .footer-content {
+    gap: 4rem;
+  }
+}

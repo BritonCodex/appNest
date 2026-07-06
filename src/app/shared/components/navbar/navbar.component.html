@@ -1,0 +1,28 @@
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="assets/logo.svg">
+            <span>AppNest</span>
+        </div>
+
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#clients">Clients</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="/team">Team</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="actions">
+            <button class="theme-btn" (click)="toggleTheme()">
+                @if(isDarkMode){
+                <ion-icon name="sunny"></ion-icon>
+                } @else {
+                <ion-icon name="moon"></ion-icon>
+                }
+            </button>
+            <button class="cta">Get in Touch</button>
+        </div>
+    </div>
+
+</header>

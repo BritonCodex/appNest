@@ -1,0 +1,72 @@
+<!-- testimonials.component.html -->
+
+<section class="testimonials">
+  <div class="testimonials-container">
+
+    <!-- Header -->
+    <div class="testimonials-header">
+      <h2 class="testimonials-title">
+        What Our Clients Say
+      </h2>
+
+      <p class="testimonials-subtitle">
+        Hear from businesses we've helped transform
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div class="testimonial-wrapper">
+      <div class="testimonial-card">
+        <!-- Stars -->
+        <div class="stars">
+          <span *ngFor="let star of stars">★</span>
+        </div>
+        <!-- Quote -->
+        <p class="testimonial-text">
+          "{{ testimonials[currentIndex].text }}"
+        </p>
+        <!-- Author -->
+        <div class="testimonial-author">
+          <h4 class="author-name">
+            {{ testimonials[currentIndex].name }}
+          </h4>
+          <p class="author-title">
+            {{ testimonials[currentIndex].title }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+
+    <div class="testimonial-controls">
+      <button class="nav-arrow" (click)="prevTestimonial()">
+        <svg width="20" height="20" viewBox="0 0 24 24">
+
+          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" fill="none" />
+        </svg>
+      </button>
+
+      <!-- Dots -->
+
+      <div class="testimonial-dots">
+        <button *ngFor="let item of testimonials; let i = index" class="dot" [class.active]="currentIndex === i"
+          (click)="goToTestimonial(i)">
+        </button>
+      </div>
+
+      <button class="nav-arrow" (click)="nextTestimonial()">
+        <svg width="20" height="20" viewBox="0 0 24 24">
+
+          <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            fill="none" />
+
+        </svg>
+
+      </button>
+
+    </div>
+
+  </div>
+</section>

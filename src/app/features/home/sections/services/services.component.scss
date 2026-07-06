@@ -1,0 +1,225 @@
+/* services.component.css */
+
+/* --- Services Section --- */
+.services {
+  background: #0A0A1A;
+  padding: 5rem 2rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Section Header --- */
+.services-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.services-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: -0.5px;
+}
+
+.services-subtitle {
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  color: #A0A0B8;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* --- Services Grid --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* --- Service Card --- */
+.service-card {
+  background: #12122A;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 2rem 1.5rem 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(108, 99, 255, 0.3);
+  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.08);
+}
+
+/* --- Service Icon --- */
+.service-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.service-icon svg {
+  width: 44px;
+  height: 44px;
+}
+
+/* --- Service Name --- */
+.service-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.3px;
+}
+
+/* --- Service Description --- */
+.service-description {
+  font-size: 0.9rem;
+  color: #A0A0B8;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  flex: 1;
+}
+
+/* --- Service Tags --- */
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.tag {
+  background: rgba(108, 99, 255, 0.1);
+  color: #8B83FF;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+  border: 1px solid rgba(108, 99, 255, 0.1);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .services {
+    padding: 4rem 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .services {
+    padding: 3rem 1rem;
+  }
+
+  .services-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .services-title {
+    font-size: 1.8rem;
+  }
+
+  .services-subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .service-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .service-name {
+    font-size: 1rem;
+  }
+
+  .service-description {
+    font-size: 0.85rem;
+  }
+
+  .service-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 480px) {
+  .services {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .services-title {
+    font-size: 1.5rem;
+  }
+
+  .services-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .service-card {
+    padding: 1.25rem 1rem;
+    border-radius: 12px;
+  }
+
+  .service-name {
+    font-size: 0.95rem;
+  }
+
+  .service-description {
+    font-size: 0.8rem;
+  }
+
+  .tag {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1400px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .services-container {
+    max-width: 1400px;
+  }
+
+  .service-card {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* Tablet landscape */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

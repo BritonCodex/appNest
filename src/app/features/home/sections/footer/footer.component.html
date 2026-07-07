@@ -1,71 +1,145 @@
-<!-- footer.component.html -->
 <footer class="footer">
-  <div class="footer-container">
-    <!-- Footer Main Content -->
-    <div class="footer-content">
-      <!-- Brand Column -->
-      <div class="footer-column">
-        <div class="footer-brand">
-          <div class="brand-icon">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="2" width="28" height="28" rx="8" stroke="#6C63FF" stroke-width="2.5"/>
-              <path d="M10 16L14 20L22 12" stroke="#6C63FF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="22" cy="22" r="2" fill="#6C63FF"/>
-              <circle cx="10" cy="10" r="2" fill="#6C63FF" opacity="0.6"/>
-            </svg>
-          </div>
-          <span class="brand-text">AppNest</span>
+
+
+    <div class="footer-container">
+
+
+        <!-- MAIN FOOTER -->
+
+
+        <div class="footer-grid">
+
+
+
+            <!-- BRAND -->
+
+
+            <div class="footer-brand">
+
+
+                <div class="logo">
+
+
+                    <img src="assets/logo.svg">
+
+
+                    <span>
+                        AppNest
+                    </span>
+
+
+                </div>
+
+
+
+                <p>
+
+                    Building modern digital experiences
+                    through innovative software solutions.
+
+                </p>
+
+
+            </div>
+
+
+
+
+            <!-- COMPANY -->
+
+
+            <div class="footer-column">
+
+
+                <h4>
+                    Quick Links
+                </h4>
+
+
+                <a *ngFor="let item of quickLinks" [href]="item.url">
+
+                    {{item.name}}
+
+                </a>
+
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+
+            <div class="footer-column contact-column">
+
+
+                <h4>
+                    Contact
+                </h4>
+
+
+                <a href="mailto:info.appnest&#64;gmail.com">
+
+                    info.appnest&#64;gmail.com
+
+                </a>
+
+
+                <a href="tel:+19512684385">
+
+                    +1 (951) 268-4385
+
+                </a>
+
+
+                <span>
+
+                    USA | India | Europe
+
+                </span>
+
+
+            </div>
+
+
+
         </div>
-        <p class="brand-tagline">Where Your Business Takes Flight</p>
-      </div>
 
-      <!-- Quick Links Column -->
-      <div class="footer-column">
-        <h4 class="footer-heading">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
 
-      <!-- Contact Column -->
-      <div class="footer-column">
-        <h4 class="footer-heading">Contact</h4>
-        <ul class="footer-contact">
-          <li>
-            <span class="contact-icon">📧</span>
-            <a href="mailto:info.appnest&#64;gmail.com">
-                info.appnest&#64;gmail.com
-            </a>
-          </li>
-          <li>
-            <span class="contact-icon">📞</span>
-            <a href="tel:+19512684385">+1 (951) 268-4385</a>
-          </li>
-          <li>
-            <span class="contact-icon">📞</span>
-            <a href="tel:+919618942932">+91 (961) 894-2932</a>
-          </li>
-        </ul>
-      </div>
 
-      <!-- Locations Column -->
-      <div class="footer-column">
-        <h4 class="footer-heading">Locations</h4>
-        <ul class="footer-locations">
-          <li>USA</li>
-          <li>India</li>
-          <li>Europe</li>
-        </ul>
-      </div>
+
+        <!-- SOCIAL -->
+
+
+        <div class="footer-bottom">
+
+
+            <div class="socials">
+
+
+                <a *ngFor="let social of socialLinks" [href]="social.url" target="_blank">
+
+                    {{social.name}}
+
+                </a>
+
+
+            </div>
+
+
+
+            <p>
+
+                © 2025 AppNest. All rights reserved.
+
+            </p>
+
+
+
+        </div>
+
+
+
     </div>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <p class="footer-copyright">© 2025 AppNest. All rights reserved.</p>
-    </div>
-  </div>
+
 </footer>

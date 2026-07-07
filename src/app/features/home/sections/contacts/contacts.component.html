@@ -1,57 +1,413 @@
-<section class="contact">
-  <div class="contact-container">
-    <!-- Section Header -->
-    <div class="contact-header">
-      <h2 class="contact-title">Get in Touch</h2>
-      <p class="contact-subtitle">
-        Have a project in mind? Let's discuss how we can help your business grow.
-      </p>
-    </div>
+<section class="contact" id="contact">
 
-    <!-- Contact Content -->
-    <div class="contact-content">
-      <!-- Contact Info Column -->
-      <div class="contact-info">
-        <div class="contact-details">
-          <div class="contact-item">
-            <span class="contact-icon">📧</span>
-            <a href="mailto:info.appnest&#64;gmail.com">
-                info.appnest&#64;gmail.com
-            </a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <a href="tel:+19512684385">+1 (951) 268-4385</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📞</span>
-            <a href="tel:+919618942932">+91 (961) 894-2932</a>
-          </div>
-          <div class="contact-item">
-            <span class="contact-icon">📍</span>
-            <span>USA | India | Europe</span>
-          </div>
+    <div class="contact-container">
+
+
+        <!-- ==========================
+             HEADER
+        =========================== -->
+
+        <div class="contact-header">
+
+            <span class="section-tag">
+                Contact
+            </span>
+
+            <h2 class="contact-title">
+
+                Let's Build Something
+
+                <span>Amazing</span>
+
+            </h2>
+
+
+            <p class="contact-subtitle">
+
+                Have a project in mind?
+                Let's discuss how AppNest can help transform your ideas
+                into powerful digital solutions.
+
+            </p>
+
         </div>
-      </div>
 
-      <!-- Contact Form Column -->
-      <div class="contact-form-wrapper">
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Enter your message"></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-      </div>
+
+
+        <!-- ==========================
+             CONTENT
+        =========================== -->
+
+
+        <div class="contact-content">
+
+
+            <!-- ==========================
+                 INFORMATION CARD
+            =========================== -->
+
+
+            <div class="contact-info glass-card">
+
+
+                <h3>
+                    Contact Information
+                </h3>
+
+
+                <p class="info-text">
+
+                    Reach out to our team and let's start
+                    building your next digital product.
+
+                </p>
+
+
+
+                <div class="contact-details">
+
+
+                    <!-- Email -->
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Email
+                            </span>
+
+
+                            <a href="mailto:info.appnest&#64;gmail.com">
+
+                                info.appnest&#64;gmail.com
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- USA Phone -->
+
+
+                    <div class="contact-item">
+
+
+                        <div class="contact-icon">
+                            ☎
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+
+                            <a href="tel:+19512684385">
+
+                                +1 (951) 268-4385
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- India Phone -->
+
+
+                    <div class="contact-item">
+
+
+                        <div class="contact-icon">
+                            ☎
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Phone
+                            </span>
+
+
+                            <a href="tel:+919618942932">
+
+                                +91 (961) 894-2932
+
+                            </a>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Location -->
+
+
+                    <div class="contact-item">
+
+
+                        <div class="contact-icon">
+                            📍
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Locations
+                            </span>
+
+
+                            <p>
+                                USA | India | Europe
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Social Links -->
+
+                <div class="social-links">
+
+
+                    <a
+                        *ngFor="let social of socialLinks"
+                        [href]="social.url"
+                        target="_blank"
+                        class="social-btn">
+
+                        {{social.name}}
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- ==========================
+                 FORM CARD
+            =========================== -->
+
+
+            <div class="contact-form-wrapper glass-card">
+
+
+                <form
+                    class="contact-form"
+                    (ngSubmit)="submitForm()">
+
+
+                    <!-- Name -->
+
+
+                    <div class="form-group">
+
+
+                        <label>
+                            Name
+                        </label>
+
+
+                        <input
+
+                            type="text"
+
+                            [(ngModel)]="contact.name"
+
+                            name="name"
+
+                            placeholder="Enter your name"
+
+                            required>
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+
+                    <div class="form-group">
+
+
+                        <label>
+                            Email
+                        </label>
+
+
+                        <input
+
+                            type="email"
+
+                            [(ngModel)]="contact.email"
+
+                            name="email"
+
+                            placeholder="Enter your email"
+
+                            required>
+
+                    </div>
+
+
+
+                    <!-- Company -->
+
+
+                    <div class="form-group">
+
+
+                        <label>
+                            Company
+                        </label>
+
+
+                        <input
+
+                            type="text"
+
+                            [(ngModel)]="contact.company"
+
+                            name="company"
+
+                            placeholder="Company name">
+
+                    </div>
+
+
+
+                    <!-- Service -->
+
+
+                    <div class="form-group">
+
+
+                        <label>
+                            Service
+                        </label>
+
+
+                        <select
+
+                            [(ngModel)]="contact.service"
+
+                            name="service">
+
+
+                            <option value="">
+
+                                Select a service
+
+                            </option>
+
+
+                            <option
+
+                                *ngFor="let service of services">
+
+                                {{service}}
+
+                            </option>
+
+
+                        </select>
+
+
+                    </div>
+
+
+
+
+                    <!-- Message -->
+
+
+                    <div class="form-group">
+
+
+                        <label>
+                            Message
+                        </label>
+
+
+                        <textarea
+
+                            rows="5"
+
+                            [(ngModel)]="contact.message"
+
+                            name="message"
+
+                            placeholder="Tell us about your project">
+
+                        </textarea>
+
+
+                    </div>
+
+
+
+
+                    <!-- Button -->
+
+
+                    <button
+
+                        type="submit"
+
+                        class="btn-submit">
+
+
+                        Send Message
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                    </button>
+
+
+
+                </form>
+
+
+            </div>
+
+
+        </div>
+
+
     </div>
-  </div>
+
+
 </section>

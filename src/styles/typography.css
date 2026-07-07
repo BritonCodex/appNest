@@ -1,0 +1,57 @@
+h1{
+
+    font-size:clamp(3rem,8vw,6rem);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+}
+
+h2{
+
+    font-size:clamp(2.4rem,5vw,4rem);
+
+    line-height:1.1;
+
+    font-weight:700;
+
+}
+
+h3{
+
+    font-size:1.5rem;
+
+    font-weight:600;
+
+}
+
+p{
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+
+    font-size:1rem;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+}
+
+.section-subtitle{
+
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}

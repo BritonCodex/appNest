@@ -1,175 +1,363 @@
-//client section
+/* ==========================================
+   CLIENTS SECTION
+========================================== */
 
-.clients {
-  width: 100%;
-  padding: 110px 20px;
-  background: #141923;
+.clients{
+    background: var(--background);
+    overflow: hidden;
+    transition: var(--transition);
 }
 
-.clients-container {
-  max-width: 1280px;
-  margin: 0 auto;
+.clients-container{
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 80px;
 }
 
-//header
+/* ==========================================
+   SECTION HEADER
+========================================== */
 
-.clients-header {
-  text-align: center;
-  margin-bottom: 65px;
+.section-header{
+    max-width: 760px;
+    margin: 0 auto 80px;
+    text-align: center;
 }
 
-.clients-title {
-  color: #ffffff;
-  font-size: 3.4rem;
-  font-weight: 700;
-  margin-bottom: 14px;
-  letter-spacing: -.5px;
+.section-tag{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    backdrop-filter: blur(20px);
+    font-weight: 600;
 }
 
-.clients-subtitle {
-  color: #9ca5b7;
-  font-size: 1.18rem;
-  font-weight: 400;
+.section-header h2{
+    margin: 25px 0 18px;
+    font-size: 3.5rem;
+    color: var(--text);
 }
 
-//grid
-
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+.section-header h2 span{
+    color: var(--primary);
 }
 
-//card
-
-.client-card {
-  background: #1b1b1b;
-  border: 1px solid rgba(90, 100, 255, .18);
-  border-radius: 10px;
-  padding: 34px 30px;
-  text-align: center;
-  transition: .3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100px;
+.section-header p{
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.05rem;
 }
 
-//images
+/* ==========================================
+   LOGO MARQUEE
+========================================== */
 
-.client-image {
-  width: 195px;
-  height: 78px;
-  background: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  overflow: hidden;
+.logo-slider{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 90px;
 }
 
-.client-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+.logo-slider::before,
+.logo-slider::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
 }
 
-//text
-
-.client-name {
-  color: white;
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 5px;
+.logo-slider::before{
+    left: 0;
+    background: linear-gradient(to right,var(--background),transparent);
 }
 
-.client-industry {
-  color: #6159ff;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+.logo-slider::after{
+    right: 0;
+    background: linear-gradient(to left,var(--background),transparent);
 }
 
-.client-description {
-  color: #a8afbf;
-  line-height: 1.1rem;
-  font-size: 1rem;
-  max-width: 300px;
-  margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
-}
+.logo-track{
 
-//responsive
+    display: flex;
+    width: max-content;
+    gap: 25px;
 
-@media (max-width:1100px) {
-
-  .clients-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    animation: marquee 30s linear infinite;
 
 }
 
-@media (max-width:768px) {
+.logo-slider:hover .logo-track{
 
-  .clients {
-
-    padding: 80px 18px;
-  }
-
-  .clients-title {
-
-    font-size: 2.6rem;
-  }
-
-  .clients-subtitle {
-
-    font-size: 1rem;
-  }
-
-  .clients-grid {
-
-    grid-template-columns: 1fr;
-
-    gap: 24px;
-  }
-
-  .client-card {
-
-    min-height: auto;
-
-    padding: 28px 24px;
-  }
-
-  .client-name {
-
-    font-size: 1.6rem;
-  }
+    animation-play-state: paused;
 
 }
 
-@media (max-width:480px) {
+.logo-card{
 
-  .clients {
+    min-width: 220px;
 
-    padding: 65px 15px;
-  }
+    height: 170px;
 
-  .clients-title {
+    display: flex;
 
-    font-size: 2rem;
-  }
+    flex-direction: column;
 
-  .client-image {
+    justify-content: center;
 
-    width: 170px;
+    align-items: center;
+
+    border-radius: 24px;
+
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+
+    backdrop-filter: blur(20px);
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow);
+
+}
+
+.logo-card:hover{
+
+    transform: translateY(-8px);
+
+    border-color: var(--primary);
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+.logo-svg{
+
+    width: 70px;
 
     height: 70px;
-  }
 
-  .client-description {
+    color: var(--text);
 
-    font-size: .95rem;
-  }
+    transition: var(--transition);
+
+}
+
+.logo-svg svg{
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.logo-card:hover .logo-svg{
+
+    color: var(--primary);
+
+    transform: scale(1.15) rotate(5deg);
+
+}
+
+.logo-card h4{
+
+    margin-top: 20px;
+
+    color: var(--text);
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+}
+
+/* ==========================================
+   STATS
+========================================== */
+
+.clients-stats{
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 25px;
+
+}
+
+.stat-card{
+
+    background: var(--glass);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    backdrop-filter: blur(20px);
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow);
+
+}
+
+.stat-card:hover{
+
+    transform: translateY(-8px);
+
+    border-color: var(--primary);
+
+    box-shadow: var(--shadow-hover);
+
+}
+
+.stat-card h3{
+
+    color: var(--primary);
+
+    font-size: 2.6rem;
+
+    margin-bottom: 10px;
+
+}
+
+.stat-card p{
+
+    color: var(--text-secondary);
+
+    line-height: 1.7;
+
+}
+
+/* ==========================================
+   MARQUEE ANIMATION
+========================================== */
+
+@keyframes marquee{
+
+    from{
+
+        transform: translateX(0);
+
+    }
+
+    to{
+
+        transform: translateX(-50%);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+.clients-container{
+
+padding:0 50px;
+
+}
+
+.clients-stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.clients-container{
+
+padding:0 22px;
+
+}
+
+.section-header h2{
+
+font-size:2.5rem;
+
+}
+
+.logo-card{
+
+min-width:180px;
+
+height:150px;
+
+}
+
+.logo-svg{
+
+width:55px;
+
+height:55px;
+
+}
+
+.clients-stats{
+
+grid-template-columns:1fr;
+
+}
+
+.stat-card{
+
+padding:28px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.section-header h2{
+
+font-size:2rem;
+
+}
+
+.logo-card{
+
+min-width:150px;
+
+height:130px;
+
+}
+
+.logo-svg{
+
+width:45px;
+
+height:45px;
+
+}
+
+.logo-card h4{
+
+font-size:.9rem;
+
+}
+
+.stat-card h3{
+
+font-size:2rem;
+
+}
 
 }

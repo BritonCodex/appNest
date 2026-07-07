@@ -7,7 +7,7 @@ import { FooterComponent } from '../../features/home/sections/footer/footer.comp
   imports: [CommonModule, FooterComponent],
   standalone: true,
   templateUrl: './team.component.html',
-  styleUrls: ['./team.component.scss']
+  styleUrls: ['./team.component.scss'],
 })
 export class TeamComponent {
   constructor(private location: Location) {}
@@ -24,17 +24,12 @@ export class TeamComponent {
       description:
         'Passionate about building scalable applications and optimizing deployment pipelines. Expert in cloud infrastructure and modern web technologies.',
 
-      skills: [
-        'React',
-        'Node.js',
-        'AWS',
-        'Docker',
-      ],
+      skills: ['React', 'Node.js', 'AWS', 'Docker'],
 
       linkedin: '#',
-      github: '#',
+      github: 'https://github.com/',
       twitter: '#',
-      email: 'hari@appnest.com'
+      email: 'hari@appnest.com',
     },
 
     {
@@ -51,13 +46,12 @@ export class TeamComponent {
         'Tailwind',
         'GitHub',
         'LinkedIn',
-
       ],
 
       linkedin: '#',
-      github: '#',
+      github: 'https://github.com/',
       twitter: '#',
-      email: 'nitin@appnest.com'
+      email: 'nitin@appnest.com',
     },
 
     {
@@ -74,13 +68,12 @@ export class TeamComponent {
         'GraphQL',
         'GitHub',
         'LinkedIn',
-
       ],
 
       linkedin: '#',
-      github: '#',
+      github: 'https://github.com/',
       twitter: '#',
-      email: 'rohith@appnest.com'
+      email: 'rohith@appnest.com',
     },
 
     {
@@ -90,19 +83,12 @@ export class TeamComponent {
       description:
         'Mobile development expert creating native and cross-platform applications. Focused on performance optimization and user engagement.',
 
-      skills: [
-        'React Native',
-        'Flutter',
-        'Firebase',
-        'iOS',
-        'Android',
-      ],
+      skills: ['React Native', 'Flutter', 'Firebase', 'iOS', 'Android'],
 
       linkedin: '#',
-      github: '#',
+      github: 'https://github.com/',
       twitter: '#',
-      email: 'sachin@appnest.com'
-    }
+      email: 'sachin@appnest.com',
+    },
   ];
-
 }

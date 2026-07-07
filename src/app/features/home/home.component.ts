@@ -6,16 +6,18 @@ import { ClientsComponent } from './sections/clients/clients.component';
 import { FooterComponent } from './sections/footer/footer.component';
 import { ContactsComponent } from './sections/contacts/contacts.component';
 import { TestimonialsComponent } from './sections/testimonials/testimonials.component';
+import { ProcessComponent } from './sections/process/process.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: 
+  imports:
   [
     NavbarComponent,
     HeroComponent,
     ServicesComponent,
-    ClientsComponent, 
+    ProcessComponent,
+    ClientsComponent,
     TestimonialsComponent,
     ContactsComponent,
     FooterComponent,

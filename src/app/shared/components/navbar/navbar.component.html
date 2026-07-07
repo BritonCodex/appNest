@@ -1,67 +1,149 @@
-<header>
+<header class="navbar" [class.scrolled]="scrolled">
 
-    <div class="container">
+  <div class="navbar-container">
 
-        <!-- Mobile Menu Button -->
-        <button class="menu-toggle" (click)="toggleMenu()">
+    <!-- =========================
+         LOGO
+    ========================== -->
 
-            @if(!isMenuOpen){
+    <a href="/" class="logo">
 
-                <ion-icon name="menu-outline"></ion-icon>
+      <img src="assets/logo.svg" alt="AppNest Logo">
 
-            } @else {
+      <span>AppNest</span>
 
-                <ion-icon name="close-outline"></ion-icon>
+    </a>
 
-            }
+    <!-- =========================
+         DESKTOP NAVIGATION
+    ========================== -->
 
-        </button>
+    <nav class="nav-links" [class.active]="menuOpen">
 
-        <div class="logo">
-            <img src="assets/logo.svg" alt="AppNest Logo">
-            <span>AppNest</span>
-        </div>
+      <a href="#services" (click)="closeMenu()">
+        Services
+      </a>
 
+      <a href="#clients" (click)="closeMenu()">
+        Clients
+      </a>
 
+      <a href="#testimonials" (click)="closeMenu()">
+        Testimonials
+      </a>
 
-        <!-- Navigation -->
+      <a href="/team" (click)="closeMenu()">
+        Team
+      </a>
 
-        <nav [class.active]="isMenuOpen">
+      <a href="#contact" (click)="closeMenu()">
+        Contact
+      </a>
 
-            <a href="#services" (click)="toggleMenu()">Services</a>
+    </nav>
 
-            <a href="#clients" (click)="toggleMenu()">Clients</a>
+    <!-- =========================
+         ACTIONS
+    ========================== -->
 
-            <a href="#testimonials" (click)="toggleMenu()">Testimonials</a>
+    <div class="actions">
 
-            <a href="/team" (click)="toggleMenu()">Team</a>
+      <!-- Theme -->
 
-            <a href="#contact" (click)="toggleMenu()">Contact</a>
+      <button
+        class="theme-btn"
+        (click)="toggleTheme()"
+        aria-label="Toggle Theme">
 
-        </nav>
+        @if(isDarkMode){
 
-        <div class="actions">
+          <ion-icon name="sunny"></ion-icon>
 
-            <button class="theme-btn" (click)="toggleTheme()">
+        } @else {
 
-                @if(isDarkMode){
+          <ion-icon name="moon"></ion-icon>
 
-                    <ion-icon name="sunny"></ion-icon>
+        }
 
-                } @else {
+      </button>
 
-                    <ion-icon name="moon"></ion-icon>
+      <!-- CTA -->
 
-                }
+      <button class="cta">
 
-            </button>
+        Get in Touch
 
-            <button class="cta">
-                Get in Touch
-            </button>
+      </button>
 
-        </div>
+      <!-- =========================
+           MOBILE MENU BUTTON
+      ========================== -->
+
+      <button
+        class="menu-btn"
+        (click)="toggleMenu()"
+        aria-label="Open Menu">
+
+        @if(menuOpen){
+
+          <!-- Close Icon -->
+
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none">
+
+            <path
+              d="M18 6L6 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path
+              d="M6 6L18 18"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+          </svg>
+
+        } @else {
+
+          <!-- Hamburger -->
+
+          <svg
+            width="26"
+            height="26"
+            viewBox="0 0 24 24"
+            fill="none">
+
+            <path
+              d="M3 6H21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path
+              d="M3 12H21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+            <path
+              d="M3 18H21"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"/>
+
+          </svg>
+
+        }
+
+      </button>
 
     </div>
+
+  </div>
 
 </header>

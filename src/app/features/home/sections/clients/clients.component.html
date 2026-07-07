@@ -1,91 +1,147 @@
-<section class="clients">
+<section class="clients" id="clients">
 
-  <div class="clients-container">
+    <div class="clients-container">
 
-    <!-- Header -->
-    <div class="clients-header">
-      <h2 class="clients-title">
-        Our Clients
-      </h2>
+        <!-- ==========================
+             SECTION HEADER
+        ========================== -->
 
-      <p class="clients-subtitle">
-        Trusted by businesses across various industries
-      </p>
+        <div class="section-header">
+
+            <span class="section-tag">
+
+                Trusted Technologies
+
+            </span>
+
+            <h2>
+
+                Built Using
+
+                <span>World-Class Technologies</span>
+
+            </h2>
+
+            <p>
+
+                At AppNest, we leverage industry-leading technologies and
+                modern development tools to build fast, scalable and secure
+                digital solutions for businesses of every size.
+
+            </p>
+
+        </div>
+
+        <!-- ==========================
+             LOGO MARQUEE
+        ========================== -->
+
+        <div class="logo-slider">
+
+            <div class="logo-track">
+
+                @for(item of technologies; track item.name){
+
+                    <div class="logo-card">
+
+                        <div
+                            class="logo-svg"
+                            [innerHTML]="item.svg">
+
+                        </div>
+
+                        <h4>
+
+                            {{ item.name }}
+
+                        </h4>
+
+                    </div>
+
+                }
+
+                <!-- Duplicate for infinite scrolling -->
+
+                @for(item of technologies; track item.name){
+
+                    <div class="logo-card">
+
+                        <div
+                            class="logo-svg"
+                            [innerHTML]="item.svg">
+
+                        </div>
+
+                        <h4>
+
+                            {{ item.name }}
+
+                        </h4>
+
+                    </div>
+
+                }
+
+            </div>
+
+        </div>
+
+        <!-- ==========================
+             BOTTOM STATS
+        ========================== -->
+
+        <div class="clients-stats">
+
+            <div class="stat-card">
+
+                <h3>50+</h3>
+
+                <p>
+
+                    Successful Projects
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>20+</h3>
+
+                <p>
+
+                    Modern Technologies
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>99%</h3>
+
+                <p>
+
+                    Client Satisfaction
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3>24/7</h3>
+
+                <p>
+
+                    Technical Support
+
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
-
-    <!-- Cards -->
-    <div class="clients-grid">
-
-      <!-- Travel2Day -->
-      <div class="client-card">
-        <div class="client-image">
-          <img src="images/travel2day.png" alt="Travel2Day">
-        </div>
-
-        <h3 class="client-name">
-          Travel2Day
-        </h3>
-
-        <p class="client-industry">
-          Travel & Tourism
-        </p>
-
-        <p class="client-description">
-          A modern travel platform for planning,
-          booking, and managing seamless trip
-          experiences.
-        </p>
-
-      </div>
-
-      <!-- MAPE -->
-      <div class="client-card">
-
-        <div class="client-image">
-          <img src="images/mape.png" alt="MAPE Services">
-        </div>
-
-        <h3 class="client-name">
-          MAPE Services
-        </h3>
-
-        <p class="client-industry">
-          Logistics & Fleet
-        </p>
-
-        <p class="client-description">
-          A fleet management solution for tracking,
-          scheduling, and maintaining delivery
-          vehicles.
-        </p>
-
-      </div>
-
-      <!-- RaiseFunds -->
-      <div class="client-card">
-
-        <div class="client-image">
-          <img src="images/raisefunds.png" alt="RaiseFunds">
-        </div>
-
-        <h3 class="client-name">
-          RaiseFunds
-        </h3>
-
-        <p class="client-industry">
-          Nonprofit & Fundraising
-        </p>
-
-        <p class="client-description">
-          A platform for nonprofits to organize
-          events, raise donations, and engage
-          their community.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
 
 </section>

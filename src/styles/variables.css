@@ -1,0 +1,92 @@
+/* =====================================================
+   APPNEST V2 DESIGN SYSTEM
+   Light Theme (Default)
+===================================================== */
+
+:root{
+
+    /* ==========================
+       COLORS
+    ========================== */
+
+    --background:#EAECF0;
+
+    --surface:#FFFFFF;
+
+    --surface-light:#F8FAFC;
+
+    --primary:#FE7F2D;
+
+    --primary-hover:#FF9A52;
+
+    --secondary:#233D4D;
+
+    --text:#111827;
+
+    --text-secondary:#4B5563;
+
+    --border:rgba(17,24,39,.08);
+
+    --glass:rgba(255,255,255,.65);
+
+    /* ==========================
+       SHADOWS
+    ========================== */
+
+    --shadow:
+        0 15px 40px rgba(0,0,0,.08);
+
+    --shadow-hover:
+        0 20px 50px rgba(254,127,45,.18);
+
+    /* ==========================
+       BORDER RADIUS
+    ========================== */
+
+    --radius-small:12px;
+
+    --radius:18px;
+
+    --radius-large:30px;
+
+    /* ==========================
+       TRANSITIONS
+    ========================== */
+
+    --transition:.35s ease;
+
+}
+
+/* =====================================================
+   DARK THEME
+===================================================== */
+
+body.dark-theme{
+
+    --background:#000000;
+
+    --surface:#111111;
+
+    --surface-light:#233D4D;
+
+    --primary:#FE7F2D;
+
+    --primary-hover:#FF9A52;
+
+    --secondary:#233D4D;
+
+    --text:#EAECF0;
+
+    --text-secondary:#B5BDC7;
+
+    --border:rgba(255,255,255,.08);
+
+    --glass:rgba(35,61,77,.55);
+
+    --shadow:
+        0 20px 45px rgba(0,0,0,.45);
+
+    --shadow-hover:
+        0 30px 60px rgba(254,127,45,.25);
+
+}
